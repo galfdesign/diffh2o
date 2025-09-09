@@ -31,8 +31,6 @@ export const MATERIALS: Material[] = [
     rateArea40_mg_m2_day: 0.06, // в диапазоне 0.02–0.10
     rateArea80_mg_m2_day: 0.7,  // в диапазоне 0.2–1.2
   },
-  {
-  },
   // Небарьерные (объёмная модель @40°C)
   { id: "pex-a", name: "PEX-a (без барьера)", category: "nonbarrier-vol", rateVol40_g_m3_day: 5 }, // 3–7
   { id: "pex-b", name: "PEX-b (без барьера)", category: "nonbarrier-vol", rateVol40_g_m3_day: 5 }, // 3–7
