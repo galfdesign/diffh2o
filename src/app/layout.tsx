@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
+import logo from "@/logo.png";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,6 +29,23 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="w-full py-4">
+          <div className="mx-auto max-w-5xl px-6 flex items-center justify-between">
+            <Image src={logo} alt="Logo" priority className="h-8 w-auto" />
+            <a
+              href="https://t.me/galfdesign"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Galf Design в Telegram"
+              className="text-slate-500 hover:text-sky-500 transition-colors"
+              title="Открыть Telegram канал"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M9.036 15.804l-.376 5.296c.537 0 .769-.231 1.048-.508l2.516-2.416 5.213 3.829c.955.527 1.633.25 1.895-.883l3.434-16.115h.001c.306-1.43-.517-1.986-1.452-1.64L1.12 9.27c-1.408.548-1.386 1.334-.24 1.69l5.27 1.644L19.79 6.19c.595-.39 1.136-.174.69.216" />
+              </svg>
+            </a>
+          </div>
+        </header>
         {children}
       </body>
     </html>
